@@ -1,0 +1,650 @@
+/* VARIABLES DE COLOR */
+:root {
+    --primary-color: #2ECC71;
+    /* Verde Principal */
+    --secondary-color: #F1FAEE;
+    /* Blanco roto */
+    --dark-bg: #000000;
+    /* Fondo Negro Puro */
+    --card-bg: #111111;
+    /* Fondo de tarjetas casi negro */
+    --text-color: #ffffff;
+    --accent-blue: #457B9D;
+    /* Azul secundario */
+}
+
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* BARRA DE NAVEGACIÓN */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(18, 18, 18, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--card-bg);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.btn-soci {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-soci:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* --- HERO SECTION (Portada) --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 80px;
+    /* Compensar navbar fixed */
+}
+
+/* Hero específico para Organigrama */
+.hero-organigrama {
+    height: 30vh;
+    /* Reduced from 40vh */
+    min-height: 250px;
+    /* Reduced from 300px */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1519861531473-920026393112?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    /* Imagen de equipo/reunión */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    /* Reduced margin */
+    color: #ddd;
+}
+
+/* Specific adjustment for Organigrama section */
+.org-section-container {
+    padding-top: 10px !important;
+    /* Force reduced top padding */
+}
+
+.hero-btn {
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background: var(--primary-color);
+}
+
+/* --- SECCIÓN PRÓXIMO PARTIDO (Card Design) --- */
+.match-banner {
+    background-color: var(--card-bg);
+    padding: 40px 5%;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team {
+    text-align: center;
+}
+
+.team-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.vs {
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.match-info {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* --- GRID DE EQUIPOS --- */
+.section {
+    padding: 40px 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-card {
+    background: var(--card-bg);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.team-card h3 {
+    margin-bottom: 10px;
+}
+
+/* --- SECCIÓN CONTACTO --- */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info,
+.contact-map {
+    flex: 1;
+    min-width: 300px;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.info-item strong {
+    display: block;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Botones de contacto */
+.social-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #222;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.btn-social:hover {
+    background: var(--primary-color);
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-whatsapp:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+/* Mapa Responsive */
+.contact-map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    filter: invert(90%) hue-rotate(180deg);
+}
+
+/* --- ORGANIGRAMA --- */
+.org-chart {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.org-level {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+/* Línea conectora */
+.org-level::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
+    opacity: 0.5;
+}
+
+.org-level:last-child::after {
+    display: none;
+}
+
+.level-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+
+.org-card {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 10px;
+    display: inline-block;
+    min-width: 220px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.org-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.org-card:hover::before {
+    transform: scaleX(1);
+}
+
+.org-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.15);
+    border-color: #444;
+}
+
+.president {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
+}
+
+.president:hover {
+    transform: scale(1.08);
+}
+
+.highlight {
+    border-left: 3px solid var(--primary-color);
+}
+
+.role {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.name {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+}
+
+/* Grids */
+.org-grid-3,
+.org-grid-2,
+.org-grid-4 {
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+}
+
+.org-grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.org-grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.org-grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* Estilo mini para entrenadores */
+.org-card.mini {
+    padding: 15px;
+    min-width: auto;
+    font-size: 1rem;
+    color: #ddd;
+    border-left: none;
+    text-align: center;
+}
+
+.org-card.mini:hover {
+    color: white;
+    background: #1a1a1a;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #000;
+    padding: 40px 5%;
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+}
+
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .match-banner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .org-grid-3,
+    .org-grid-2,
+    .org-grid-4 {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .org-level::after {
+        display: none;
+    }
+}
+
+/* --- ESTILOS DE PÁGINAS INTERNAS (Presentación, Colaboradores, etc.) --- */
+.page-content {
+    padding: 120px 5% 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* --- COLABORADORES --- */
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+.sponsor-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #333;
+    transition: transform 0.3s, border-color 0.3s;
+    height: 100%;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.sponsor-logo {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.sponsor-card:hover .sponsor-logo {
+    filter: grayscale(0%);
+}
+
+.sponsor-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.sponsor-info {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.sponsor-info p {
+    margin-bottom: 5px;
+}
+
+.sponsor-info .discount {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* --- PRESENTACIÓN --- */
+.content-block {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--primary-color);
+    text-align: left;
+}
+
+.content-block h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.content-block p {
+    margin-bottom: 15px;
+    color: #ccc;
+    font-size: 1.1rem;
+}

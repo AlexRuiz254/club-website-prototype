@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Club | Passió per l'Esport</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏀</text></svg>">
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Example Club Logo">
+            <span>Example Club</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inici</a></li>
+            <li><a href="#calendari">Calendari</a></li>
+            <li><a href="#equipos">Equips</a></li>
+            <li class="dropdown">
+                <a href="#club">El Club <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="presentacion.html">Presentació</a>
+                    <a href="organigrama.html">Qui som?</a>
+                    <a href="colaboradores.html">Col·laboradors</a>
+                </div>
+            </li>
+            <li><a href="#contacto">Contacte</a></li>
+            <li><a href="#" class="btn-soci">Fes-te soci</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <h1>SOM ESPORT. SOM EQUIP.</h1>
+        <p>Esforç, Passió i Equip des de 1991</p>
+        <a href="#equipos" class="hero-btn">VEURE EQUIPS</a>
+    </section>
+
+    <div class="match-banner" id="calendari">
+        <div class="team">
+            <span class="team-name">CALENDARI OFICIAL</span>
+            <small>Consulta tots els partits</small>
+        </div>
+        <div class="match-info">
+            <p>Consulta els horaris i resultats de tots els nostres equips a la web de la Federació.</p>
+            <a href="https://www.basquetcatala.cat" target="_blank" class="hero-btn"
+                style="background: var(--primary-color); border: none; margin-top: 10px; display: inline-block;">VEURE
+                CALENDARI</a>
+        </div>
+    </div>
+
+    <section class="section" id="equipos">
+        <h2 class="section-title">NUESTROS EQUIPOS</h2>
+        <div class="teams-grid">
+            <div class="team-card">
+                <h3>ESCOLA</h3>
+                <p>El futuro del club</p>
+            </div>
+            <div class="team-card">
+                <h3>MINI ESPORT</h3>
+                <p>Aprendizaje y diversión</p>
+            </div>
+            <div class="team-card">
+                <h3>INFANTIL / CADETE</h3>
+                <p>Competición y formación</p>
+            </div>
+            <div class="team-card">
+                <h3>JUNIOR / SÉNIOR</h3>
+                <p>Alto rendimiento</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contacto">
+        <h2 class="section-title">CONTACTE</h2>
+        <div class="contact-container">
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11956.126435607212!2d2.15899!3d41.38879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f000000001%3A0x0!2sExample%20Town!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Ens trobaràs a:</strong>
+                        <p>Carrer de l'Esport, 12</p>
+                        <p>08000 Example Town</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Horari d'atenció:</strong>
+                        <p>Pavelló Municipal 2</p>
+                        <p>Dimecres i Divendres: 17:00h - 18:30h</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>Telèfon i WhatsApp:</strong>
+                        <p>600 123 456</p>
+                        <a href="#" class="btn-whatsapp"
+                            onclick="event.preventDefault(); alert('Aquesta funcionalitat està desactivada en aquesta versió de prova.');">
+                            <i class="fab fa-whatsapp"></i> Enviar Mensaje
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong>
+                        <p>contact@clubwebsite.dev</p>
+                    </div>
+                </div>
+
+                <div class="social-buttons">
+                    <a href="https://instagram.com/exampleclub" target="_blank" class="btn-social"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/exampleclub" target="_blank" class="btn-social"><i
+                            class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Pavelló Municipal de l'Esport</p>
+        <small>&copy; 2025 Example Club. Todos los derechos reservados.</small>
+    </footer>
+
+    <script>
+        console.log("Web del Example Club cargada correctamente.");
+    </script>
+</body>
+
+</html>
