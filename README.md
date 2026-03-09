@@ -27,6 +27,6 @@ Some information was anonymized and replaced with placeholder content for privac
 
 ## Author
 
-**Alex Ruiz Zapater**
+Alex Ruiz Zapater  
 Computer Engineering student  
 Universitat Autònoma de Barcelona
